@@ -1,53 +1,3 @@
-﻿' Developer Express Code Central Example:
-' How to calculate routes from major roads using the Bing Map Route web service
-' 
-' This example demonstrates how to calculate routes to the destination point from
-' major roads using the BingRouteDataProvider.CalculateRoutesFromMajorRoads
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteDataProvider_CalculateRoutesFromMajorRoadstopic)
-' method.
-' Before route calculation, specify destination point coordinates
-' (GeoPoint.Latitude
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapGeoPoint_Latitudetopic)
-' and GeoPoint.Longitude
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapGeoPoint_Longitudetopic)).
-' In addition, you can specify optional parameters: the destination name, driving
-' or walking route travel mode using the BingRouteOptions.Mode
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteOptions_Modetopic)
-' property and route optimization options to calculate an optimal route either by
-' time or by distance via the BingRouteOptions.RouteOptimization
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteOptions_RouteOptimizationtopic)
-' property.
-' 
-' To start the application, click the Calculate Routes From Major
-' Roads button. All parameters are passed to the CalculateMajorRouteRequest
-' method, and you can see the results in the rich text box element and calculated
-' routes on a map. The requested results contain the total distance of a route,
-' itinerary item (BingRouteResult.Distance
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteResult_Distancetopic),
-' BingRouteLeg.Distance
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteLeg_Distancetopic),
-' BingItineraryItem.Distance
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingItineraryItem_Distancetopic)),
-' the time required to follow the calculated route (BingRouteResult.Time
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteResult_Timetopic))
-' and pass the rout leg and itinerary item (BingRouteLeg.Time
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteLeg_Timetopic),
-' BingItineraryItem.Time
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingItineraryItem_Timetopic)).
-' You can also see the maneuvers associated with the itinerary item
-' (BingItineraryItem.Maneuver
-' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingItineraryItem_Maneuvertopic))
-' and other parameters.
-' Note that if you run this sample as is, you will get a
-' warning message informing that the specified Bing Maps key is invalid. To learn
-' how to register a Bing Maps account and create a key for it, refer to the How
-' to: Get a Bing Maps Key
-' (http://documentation.devexpress.com/#WindowsForms/CustomDocument15102)
-' tutorial.
-' 
-' You can find sample updates and versions for different programming languages here:
-' http://www.devexpress.com/example=E5064
-
 ' Developer Express Code Central Example:
 ' How to calculate routes from major roads using the Bing Map Route web service
 ' 
@@ -97,7 +47,55 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5064
-
+' Developer Express Code Central Example:
+' How to calculate routes from major roads using the Bing Map Route web service
+' 
+' This example demonstrates how to calculate routes to the destination point from
+' major roads using the BingRouteDataProvider.CalculateRoutesFromMajorRoads
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteDataProvider_CalculateRoutesFromMajorRoadstopic)
+' method.
+' Before route calculation, specify destination point coordinates
+' (GeoPoint.Latitude
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapGeoPoint_Latitudetopic)
+' and GeoPoint.Longitude
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapGeoPoint_Longitudetopic)).
+' In addition, you can specify optional parameters: the destination name, driving
+' or walking route travel mode using the BingRouteOptions.Mode
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteOptions_Modetopic)
+' property and route optimization options to calculate an optimal route either by
+' time or by distance via the BingRouteOptions.RouteOptimization
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteOptions_RouteOptimizationtopic)
+' property.
+' 
+' To start the application, click the Calculate Routes From Major
+' Roads button. All parameters are passed to the CalculateMajorRouteRequest
+' method, and you can see the results in the rich text box element and calculated
+' routes on a map. The requested results contain the total distance of a route,
+' itinerary item (BingRouteResult.Distance
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteResult_Distancetopic),
+' BingRouteLeg.Distance
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteLeg_Distancetopic),
+' BingItineraryItem.Distance
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingItineraryItem_Distancetopic)),
+' the time required to follow the calculated route (BingRouteResult.Time
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteResult_Timetopic))
+' and pass the rout leg and itinerary item (BingRouteLeg.Time
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingRouteLeg_Timetopic),
+' BingItineraryItem.Time
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingItineraryItem_Timetopic)).
+' You can also see the maneuvers associated with the itinerary item
+' (BingItineraryItem.Maneuver
+' (http://documentation.devexpress.com/#WindowsForms/DevExpressXtraMapBingItineraryItem_Maneuvertopic))
+' and other parameters.
+' Note that if you run this sample as is, you will get a
+' warning message informing that the specified Bing Maps key is invalid. To learn
+' how to register a Bing Maps account and create a key for it, refer to the How
+' to: Get a Bing Maps Key
+' (http://documentation.devexpress.com/#WindowsForms/CustomDocument15102)
+' tutorial.
+' 
+' You can find sample updates and versions for different programming languages here:
+' http://www.devexpress.com/example=E5064
 ' Developer Express Code Central Example:
 ' How to get routes to the destination point using the Bing Map Route data service
 ' 
@@ -148,9 +146,10 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5064
-
 Namespace CalculateRoutesFromMajorRoads
-    Partial Public Class Form1
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -161,14 +160,14 @@ Namespace CalculateRoutesFromMajorRoads
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -231,7 +230,7 @@ Namespace CalculateRoutesFromMajorRoads
             ' cbMode
             ' 
             Me.cbMode.FormattingEnabled = True
-            Me.cbMode.Items.AddRange(New Object() { "Driving", "Walking"})
+            Me.cbMode.Items.AddRange(New Object() {"Driving", "Walking"})
             Me.cbMode.Location = New System.Drawing.Point(176, 10)
             Me.cbMode.Name = "cbMode"
             Me.cbMode.Size = New System.Drawing.Size(121, 21)
@@ -245,6 +244,7 @@ Namespace CalculateRoutesFromMajorRoads
             Me.calculateRoutes.TabIndex = 10
             Me.calculateRoutes.Text = "Calculate Routes From Major Roads"
             Me.calculateRoutes.UseVisualStyleBackColor = True
+            AddHandler Me.calculateRoutes.Click, New System.EventHandler(AddressOf Me.calculateRoutes_Click)
             ' 
             ' label2
             ' 
@@ -258,7 +258,7 @@ Namespace CalculateRoutesFromMajorRoads
             ' cbOptimize
             ' 
             Me.cbOptimize.FormattingEnabled = True
-            Me.cbOptimize.Items.AddRange(New Object() { "Minimize Time", "Minimize Distance"})
+            Me.cbOptimize.Items.AddRange(New Object() {"Minimize Time", "Minimize Distance"})
             Me.cbOptimize.Location = New System.Drawing.Point(176, 47)
             Me.cbOptimize.Name = "cbOptimize"
             Me.cbOptimize.Size = New System.Drawing.Size(121, 21)
@@ -312,7 +312,7 @@ Namespace CalculateRoutesFromMajorRoads
             Me.tbResults.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tbResults.Location = New System.Drawing.Point(0, 0)
             Me.tbResults.Name = "tbResults"
-            Me.tbResults.ReadOnly = True
+            Me.tbResults.[ReadOnly] = True
             Me.tbResults.Size = New System.Drawing.Size(472, 474)
             Me.tbResults.TabIndex = 11
             Me.tbResults.Text = ""
@@ -325,30 +325,39 @@ Namespace CalculateRoutesFromMajorRoads
             Me.Controls.Add(Me.panel1)
             Me.Name = "Form1"
             Me.Text = "Form1"
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
             Me.panel1.ResumeLayout(False)
             Me.panel3.ResumeLayout(False)
             Me.panel3.PerformLayout()
             Me.panel2.ResumeLayout(False)
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private panel1 As System.Windows.Forms.Panel
-        Private WithEvents calculateRoutes As System.Windows.Forms.Button
-        Private tbLongitude As System.Windows.Forms.TextBox
-        Private label4 As System.Windows.Forms.Label
-        Private tbLatitude As System.Windows.Forms.TextBox
-        Private cbOptimize As System.Windows.Forms.ComboBox
-        Private label3 As System.Windows.Forms.Label
-        Private label2 As System.Windows.Forms.Label
-        Private cbMode As System.Windows.Forms.ComboBox
-        Private label1 As System.Windows.Forms.Label
-        Private tbResults As System.Windows.Forms.RichTextBox
-        Private panel2 As System.Windows.Forms.Panel
-        Private panel3 As System.Windows.Forms.Panel
 
+        Private calculateRoutes As System.Windows.Forms.Button
+
+        Private tbLongitude As System.Windows.Forms.TextBox
+
+        Private label4 As System.Windows.Forms.Label
+
+        Private tbLatitude As System.Windows.Forms.TextBox
+
+        Private cbOptimize As System.Windows.Forms.ComboBox
+
+        Private label3 As System.Windows.Forms.Label
+
+        Private label2 As System.Windows.Forms.Label
+
+        Private cbMode As System.Windows.Forms.ComboBox
+
+        Private label1 As System.Windows.Forms.Label
+
+        Private tbResults As System.Windows.Forms.RichTextBox
+
+        Private panel2 As System.Windows.Forms.Panel
+
+        Private panel3 As System.Windows.Forms.Panel
     End Class
 End Namespace
-
