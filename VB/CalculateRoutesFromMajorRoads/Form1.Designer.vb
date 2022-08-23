@@ -1,5 +1,7 @@
-﻿Namespace CalculateRoutesFromMajorRoads
-    Partial Public Class Form1
+Namespace CalculateRoutesFromMajorRoads
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -80,7 +82,7 @@
             ' cbMode
             ' 
             Me.cbMode.FormattingEnabled = True
-            Me.cbMode.Items.AddRange(New Object() { "Driving", "Walking"})
+            Me.cbMode.Items.AddRange(New Object() {"Driving", "Walking"})
             Me.cbMode.Location = New System.Drawing.Point(176, 10)
             Me.cbMode.Name = "cbMode"
             Me.cbMode.Size = New System.Drawing.Size(121, 21)
@@ -94,6 +96,7 @@
             Me.calculateRoutes.TabIndex = 10
             Me.calculateRoutes.Text = "Calculate Routes From Major Roads"
             Me.calculateRoutes.UseVisualStyleBackColor = True
+            AddHandler Me.calculateRoutes.Click, New System.EventHandler(AddressOf Me.calculateRoutes_Click)
             ' 
             ' label2
             ' 
@@ -107,7 +110,7 @@
             ' cbOptimize
             ' 
             Me.cbOptimize.FormattingEnabled = True
-            Me.cbOptimize.Items.AddRange(New Object() { "Minimize Time", "Minimize Distance"})
+            Me.cbOptimize.Items.AddRange(New Object() {"Minimize Time", "Minimize Distance"})
             Me.cbOptimize.Location = New System.Drawing.Point(176, 47)
             Me.cbOptimize.Name = "cbOptimize"
             Me.cbOptimize.Size = New System.Drawing.Size(121, 21)
@@ -161,7 +164,7 @@
             Me.tbResults.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tbResults.Location = New System.Drawing.Point(0, 0)
             Me.tbResults.Name = "tbResults"
-            Me.tbResults.ReadOnly = True
+            Me.tbResults.[ReadOnly] = True
             Me.tbResults.Size = New System.Drawing.Size(472, 474)
             Me.tbResults.TabIndex = 11
             Me.tbResults.Text = ""
@@ -174,30 +177,39 @@
             Me.Controls.Add(Me.panel1)
             Me.Name = "Form1"
             Me.Text = "Form1"
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
             Me.panel1.ResumeLayout(False)
             Me.panel3.ResumeLayout(False)
             Me.panel3.PerformLayout()
             Me.panel2.ResumeLayout(False)
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private panel1 As System.Windows.Forms.Panel
-        Private WithEvents calculateRoutes As System.Windows.Forms.Button
-        Private tbLongitude As System.Windows.Forms.TextBox
-        Private label4 As System.Windows.Forms.Label
-        Private tbLatitude As System.Windows.Forms.TextBox
-        Private cbOptimize As System.Windows.Forms.ComboBox
-        Private label3 As System.Windows.Forms.Label
-        Private label2 As System.Windows.Forms.Label
-        Private cbMode As System.Windows.Forms.ComboBox
-        Private label1 As System.Windows.Forms.Label
-        Private tbResults As System.Windows.Forms.RichTextBox
-        Private panel2 As System.Windows.Forms.Panel
-        Private panel3 As System.Windows.Forms.Panel
 
+        Private calculateRoutes As System.Windows.Forms.Button
+
+        Private tbLongitude As System.Windows.Forms.TextBox
+
+        Private label4 As System.Windows.Forms.Label
+
+        Private tbLatitude As System.Windows.Forms.TextBox
+
+        Private cbOptimize As System.Windows.Forms.ComboBox
+
+        Private label3 As System.Windows.Forms.Label
+
+        Private label2 As System.Windows.Forms.Label
+
+        Private cbMode As System.Windows.Forms.ComboBox
+
+        Private label1 As System.Windows.Forms.Label
+
+        Private tbResults As System.Windows.Forms.RichTextBox
+
+        Private panel2 As System.Windows.Forms.Panel
+
+        Private panel3 As System.Windows.Forms.Panel
     End Class
 End Namespace
-
