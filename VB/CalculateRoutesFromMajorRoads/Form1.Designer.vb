@@ -1,5 +1,7 @@
-﻿Namespace CalculateRoutesFromMajorRoads
-    Partial Public Class Form1
+Namespace CalculateRoutesFromMajorRoads
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -44,21 +46,21 @@
             Me.lciLatitude = New DevExpress.XtraLayout.LayoutControlItem()
             Me.lciLongitude = New DevExpress.XtraLayout.LayoutControlItem()
             Me.defaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel()
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            DirectCast(Me.teLongitude.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.teLatitude.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.cbeRouteOptimization.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.cbeTravelMode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.mapControl, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciTravelMode, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciRouteOptimization, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciLatitude, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciLongitude, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.teLongitude.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.teLatitude.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.cbeRouteOptimization.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.cbeTravelMode.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem2), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciTravelMode), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciRouteOptimization), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem4), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciLatitude), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciLongitude), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' imageLayer
@@ -94,6 +96,7 @@
             Me.teLongitude.Size = New System.Drawing.Size(98, 20)
             Me.teLongitude.StyleController = Me.layoutControl1
             Me.teLongitude.TabIndex = 16
+            AddHandler Me.teLongitude.Validating, New System.ComponentModel.CancelEventHandler(AddressOf Me.OnLongitudeValidating)
             ' 
             ' teLatitude
             ' 
@@ -102,6 +105,7 @@
             Me.teLatitude.Size = New System.Drawing.Size(98, 20)
             Me.teLatitude.StyleController = Me.layoutControl1
             Me.teLatitude.TabIndex = 15
+            AddHandler Me.teLatitude.Validating, New System.ComponentModel.CancelEventHandler(AddressOf Me.OnLatitudeValidating)
             ' 
             ' btnCalculateRoutes
             ' 
@@ -111,24 +115,27 @@
             Me.btnCalculateRoutes.StyleController = Me.layoutControl1
             Me.btnCalculateRoutes.TabIndex = 14
             Me.btnCalculateRoutes.Text = "Calculate Routes From Major Roads"
+            AddHandler Me.btnCalculateRoutes.Click, New System.EventHandler(AddressOf Me.OnCalculateRoutesClick)
             ' 
             ' cbeRouteOptimization
             ' 
             Me.cbeRouteOptimization.Location = New System.Drawing.Point(534, 78)
             Me.cbeRouteOptimization.Name = "cbeRouteOptimization"
-            Me.cbeRouteOptimization.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.cbeRouteOptimization.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.cbeRouteOptimization.Size = New System.Drawing.Size(98, 20)
             Me.cbeRouteOptimization.StyleController = Me.layoutControl1
             Me.cbeRouteOptimization.TabIndex = 13
+            AddHandler Me.cbeRouteOptimization.SelectedIndexChanged, New System.EventHandler(AddressOf Me.OnRouteOptimizationSelectedIndexChanged)
             ' 
             ' cbeTravelMode
             ' 
             Me.cbeTravelMode.Location = New System.Drawing.Point(534, 54)
             Me.cbeTravelMode.Name = "cbeTravelMode"
-            Me.cbeTravelMode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.cbeTravelMode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.cbeTravelMode.Size = New System.Drawing.Size(98, 20)
             Me.cbeTravelMode.StyleController = Me.layoutControl1
             Me.cbeTravelMode.TabIndex = 12
+            AddHandler Me.cbeTravelMode.SelectedIndexChanged, New System.EventHandler(AddressOf Me.OnTravelModeSelectedIndexChanged)
             ' 
             ' rtbResults
             ' 
@@ -149,9 +156,9 @@
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.layoutControlItem1, Me.layoutControlItem2, Me.lciTravelMode, Me.lciRouteOptimization, Me.layoutControlItem4, Me.lciLatitude, Me.lciLongitude})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutControlItem1, Me.layoutControlItem2, Me.lciTravelMode, Me.lciRouteOptimization, Me.layoutControlItem4, Me.lciLatitude, Me.lciLongitude})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "layoutControlGroup1"
             Me.layoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(4, 4, 4, 4)
@@ -234,48 +241,66 @@
             Me.Controls.Add(Me.layoutControl1)
             Me.Name = "Form1"
             Me.Text = "Calculate Routes From Major Roads Example"
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            DirectCast(Me.teLongitude.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.teLatitude.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.cbeRouteOptimization.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.cbeTravelMode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.mapControl, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciTravelMode, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciRouteOptimization, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciLatitude, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciLongitude, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.teLongitude.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.teLatitude.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.cbeRouteOptimization.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.cbeTravelMode.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem2), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciTravelMode), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciRouteOptimization), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem4), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciLatitude), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciLongitude), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
+
         Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+
         Private mapControl As DevExpress.XtraMap.MapControl
+
         Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+
         Private rtbResults As System.Windows.Forms.RichTextBox
+
         Private layoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
-        Private WithEvents cbeTravelMode As DevExpress.XtraEditors.ComboBoxEdit
+
+        Private cbeTravelMode As DevExpress.XtraEditors.ComboBoxEdit
+
         Private lciTravelMode As DevExpress.XtraLayout.LayoutControlItem
+
         Private imageLayer As DevExpress.XtraMap.ImageLayer
+
         Private imageProvider As DevExpress.XtraMap.BingMapDataProvider
+
         Private informationLayer As DevExpress.XtraMap.InformationLayer
+
         Private bingRouteDataProvider1 As DevExpress.XtraMap.BingRouteDataProvider
-        Private WithEvents cbeRouteOptimization As DevExpress.XtraEditors.ComboBoxEdit
+
+        Private cbeRouteOptimization As DevExpress.XtraEditors.ComboBoxEdit
+
         Private lciRouteOptimization As DevExpress.XtraLayout.LayoutControlItem
-        Private WithEvents btnCalculateRoutes As DevExpress.XtraEditors.SimpleButton
+
+        Private btnCalculateRoutes As DevExpress.XtraEditors.SimpleButton
+
         Private layoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
-        Private WithEvents teLatitude As DevExpress.XtraEditors.TextEdit
+
+        Private teLatitude As DevExpress.XtraEditors.TextEdit
+
         Private lciLatitude As DevExpress.XtraLayout.LayoutControlItem
-        Private WithEvents teLongitude As DevExpress.XtraEditors.TextEdit
+
+        Private teLongitude As DevExpress.XtraEditors.TextEdit
+
         Private lciLongitude As DevExpress.XtraLayout.LayoutControlItem
+
         Private defaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
     End Class
 End Namespace
-
